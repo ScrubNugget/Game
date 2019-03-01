@@ -1,13 +1,44 @@
 public class map{
 private int m[][]=new int[20][20];
-
-
+private int pr=0;
+private int pc=0;
 public map(){
 	for (int x=0; x<20; x++){
 		for (int y=0; y<20; y++){
 			m[x][y]=(int)(Math.random()*5);
 		}
 	}
+}
+public void North(){
+	if (pr-1>0){
+		if (pr-1!=1 && pr-1!=2 && pr-1!=3 && pr-1!=4){
+			pr++;
+		}
+	}
+}
+public void South(){
+	if (pr+1<m.length){
+		if (pr+1!=1 && pr+1!=2 && pr+1!=3 && pr+1!=4){
+			pr++;
+		}
+	}
+
+}
+public void East(){
+	if (pc+1<m.length){
+			if (pc+1!=1 && pc+1!=2 && pc+1!=3 && pc+1!=4){
+				pc++;
+			}
+	}
+
+}
+public void West(){
+	if (pc-1<m.length){
+				if (pc-1!=1 && pc-1!=2 && pc-1!=3 && pc-1!=4){
+					pc--;
+				}
+		}
+
 }
 public void remove(){
 

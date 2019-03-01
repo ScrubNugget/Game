@@ -9,36 +9,45 @@ public map(){
 		}
 	}
 }
-public void North(){
+public boolean North(){
+	boolean b=false;
 	if (pr-1>0){
 		if (pr-1!=1 && pr-1!=2 && pr-1!=3 && pr-1!=4){
 			pr++;
+			b=true;
 		}
 	}
+return b;
 }
-public void South(){
+public boolean South(){
+	boolean b=false;
 	if (pr+1<m.length){
 		if (pr+1!=1 && pr+1!=2 && pr+1!=3 && pr+1!=4){
 			pr++;
+			b=true;
 		}
 	}
-
+return b;
 }
-public void East(){
+public boolean East(){
+	boolean b=false;
 	if (pc+1<m.length){
 			if (pc+1!=1 && pc+1!=2 && pc+1!=3 && pc+1!=4){
 				pc++;
+				b=true;
 			}
 	}
-
+return b;
 }
-public void West(){
+public boolean West(){
+	boolean b=false;
 	if (pc-1<m.length){
 				if (pc-1!=1 && pc-1!=2 && pc-1!=3 && pc-1!=4){
 					pc--;
+					b=true;
 				}
 		}
-
+return b;
 }
 public void remove(){
 

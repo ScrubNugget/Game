@@ -18,12 +18,12 @@ public class Cave extends JPanel implements KeyListener {
 	int imgypos;
 	int bx;
 	int by;
-	map m = new map();
+	Map m = new Map();
 
 	public Cave() {
 	    setBackground(Color.black);
 
-		m = new map();
+		m = new Map();
 		imgxpos = 0;
 		imgypos = 0;
 		bx = 0;
@@ -60,19 +60,19 @@ public class Cave extends JPanel implements KeyListener {
 		//DRAWING MAP -- ANDREW MATAYKA
 		for (int x = 0; x < 20; x++) {
 			for (int y = 0; y < 20; y++) {
-				if (m.get(x, y) == 1) {
+				if (m.getCoordinates(x, y) == 1) {
 					g2d.setColor(Color.red);
 					g2d.fillRect(x*50, y*50, 50, 50);
 				}
-				if (m.get(x, y) == 2) {
+				if (m.getCoordinates(x, y) == 2) {
 					g2d.setColor(Color.blue);
 					g2d.fillRect(x*50, y*50, 50, 50);
 				}
-				if (m.get(x, y) == 3) {
+				if (m.getCoordinates(x, y) == 3) {
 					g2d.setColor(Color.yellow);
 					g2d.fillRect(x*50, y*50, 50, 50);
 				}
-				if (m.get(x, y) == 4) {
+				if (m.getCoordinates(x, y) == 4) {
 					g2d.setColor(Color.darkGray);
 					g2d.fillRect(x*50, y*50, 50, 50);
 				}

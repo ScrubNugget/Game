@@ -52,4 +52,10 @@ return b;
 public void remove(){
 
 }
+public int get(int c, int r){
+	int x=m[c][r];
+	return x;
+
+}
+//This makes it so I can retrieve specific values from coordinates
 }
